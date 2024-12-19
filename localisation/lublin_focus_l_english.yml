@@ -1,0 +1,56 @@
+﻿l_english:
+  lublinunion:0 "Restore the Lublin union"
+  lublinunion_desc:0 "Restoring the Union with our allies will benefit us both."
+  influencelit:0 "influence Lithuania"
+  influencelit_desc:0 "Provoke fascist influence in the Lithuanian government."
+  demand:0 "Demand Territorial expansion"
+  demand_desc:0 "We, as an independent country, refuse to remain an inclave, we demand more land of our own."
+  demandcont:0 "Press on Poland"
+  demandcont_desc:0 "Assert more claims to Polish territories, they belong to us!"
+  demandcontcont:0 "Continue territorial expansion"
+  demandcontcont_desc:0 "The last step to finishing our border dispute with Poland ends with taking away all of north-eastern Poland."
+  demandwilno:0 "Pressure Poland"
+  demandwilno_desc:0 ""
+  demandwilejka:0 "Demand Polish land"
+  demandwilejka_desc:0 ""
+  invadepoland:0 "The Last Blow"
+  invadepoland_desc:0 "Time has come for our last dispute with Poland, we have waited long enough. War comes now."
+  demandkrakow:0 "Demand Krakow"
+  demandkrakow_desc:0 "Demand more Polish territories"
+  cop_fund:0 "Fund the CID"
+  cop_fund_desc:0 "Beginthe construction of the Central Financial District"
+  cop_develop:0 "Develop the CID"
+  cop_develop_desc:0 "Continue the construction of the CID, expand the distric to more territories"
+  cop_finish:0 "Finalise the CID"
+  cop_finish_desc:0 "Complete the construction of the Cenral Industrial District"
+  lublin_infantry:0 "Develop Infantry dectrine"
+  #desc
+  lublin_weapons:0 "develop infantry arms"
+  #desc
+  lublin_tanks:0 "Produce the 7TP"
+  #desc
+  lublin_at:0 "Produce the Wz. 35 UR"
+  #desc
+  lublin_airplane:0 "Produce the PZL-37 "Łoś" "
+  #desc
+  lublin_artillery:0 "Produce the 75mm wz. 02/26"
+  #desc
+  KOP:0 "Fund the KOP"
+  #desc
+  reinforce_eastern_border:0 "Reinforce eastern border"
+  #desc
+  war_with_ussr:0 "War with the USSR"
+  #desc
+  improve_relations_with_ger:0 "Improve relations with Germany"
+  #desc
+  ask_to_join_axis:0 "Ask to join the Axis"
+  #desc
+  ani_comitern:0 "Ask to join the Anti-Comintern Pact"
+  #desc
+  strengthen_fasicsm:0 "Strengthen fasicsm"
+  #desc
+  ask_for_equipment:0 "Seek support" #?
+  #desc
+  prepare_for_war:0 "Preapare for War"
+  #desc
+  continue_border:0 "Continute to fortify the border"

@@ -1,0 +1,280 @@
+add_namespace = lubelszczyzna
+
+country_event = {
+    id = lubelszczyzna.1
+    title = "Lubelszczyzna wants to restore the Lublin Union"
+    desc = "The poeple of Lubline believe, that Lubelszczyzna and Lithuania share a lot in common, thus they should unite, for power and glory"
+    picture = GFX_report_event_generic
+
+    option = {
+        name = "Restore the union"
+        annex_country = {
+            target = LIT
+        }
+        LUB = {
+            11 = { add_core_of = LUB }
+            12 = { add_core_of = LUB }
+            13 = { add_core_of = LUB }
+            96 = { add_core_of = LUB }
+            97 = { add_core_of = LUB }
+            93 = { add_core_of = LUB }
+            94 = { add_core_of = LUB }
+            188 = { add_core_of = LUB }
+            189 = { add_core_of = LUB }
+            190 = { add_core_of = LUB }
+        }
+        ai_chance = {
+            factor = 95
+        }
+    }
+
+    option = {
+        name = "Refuse the Union"
+        create_wargoal = {
+            target = LIT
+            type = puppet_wargoal_focus
+        }
+    }
+}
+
+country_event = {
+    id = lubelszczyzna.2
+    title = "Support Fascism in Lithuania"
+    desc = "Lubelszczyzna is supporting the rise of fascism in Lithuania to strengthen ties between our nations."
+    picture = GFX_report_event_generic
+    is_triggered_only = yes
+    trigger = {
+         tag = LIT
+    }
+
+    option = {
+        name = "Increase Fascist Support"
+        add_popularity = {
+            ideology = fascism
+            popularity = 0.20
+        }
+    }
+}
+
+country_event = {
+    id = lubelszczyzna.3
+    title = "Lubelszczyzna demands Polish land"
+    desc = "The Lublin state presses demands on the states of Polesie, Wolyn and Bialystok"
+    picture = GFX_report_event_lithuania_army
+     is_triggered_only = yes
+     trigger = {
+          tag = POL
+     }
+    option = {
+        name = "Fold to Lubelszczyzna demands"
+        ai_chance = {
+            factor = 99
+        }
+            LUB = {
+                add_state_claim = 93
+                add_state_claim = 94
+                add_state_claim = 97
+            }
+			transfer_state = 93
+			transfer_state = 94
+			transfer_state = 97
+    }
+    option = {
+        name = "They will not take what is ours!"
+            LUB = {
+                declare_war_on = {
+                    target = POL
+                    type = annex_everything
+                }
+        }
+    }
+}
+
+country_event = {
+    id = lubelszczyzna.4
+    title = "Lubelszczyzna demands Polish land"
+    desc = "Lubelszczyzna is pressing further claims to Polish territory"
+    picture = GFX_report_event_lithuania_army
+    is_triggered_only = yes
+    trigger = {
+        tag = POL
+    }
+
+    option = {
+        name = "Fold to Lubelszczyzna demands"
+        ai_chance = {
+            factor = 99
+        }
+            LUB = {
+                add_state_claim = 95
+                add_state_claim = 784 #wilno
+            }
+			transfer_state = 95
+			transfer_state = 784
+    }
+    option = {
+        name = "This has gone far enough!"
+            LUB = {
+                declare_war_on = {
+                    target = POL
+                    type = annex_everything
+                }
+        }
+    }
+    
+}
+
+country_event = {
+    id = lubelszczyzna.5
+    title = "Lubelszczyzna demands Polish land"
+    desc = "Lubelszczyzna is pressing further claims to Polish territory"
+    picture = GFX_report_event_lithuania_army
+    is_triggered_only = yes
+    trigger = {
+        tag = POL
+    }
+
+    option = {
+        name = "Fold to Lubelszczyzna demands"
+        ai_chance = {
+            factor = 100
+            base = 100
+        }
+            LUB = {
+                add_state_claim = 96 #wilejka
+                add_state_claim = 91 #lwow
+                add_state_claim = 89 #stanislawow
+            }
+			transfer_state = 96
+			transfer_state = 91
+            transfer_state = 89
+    }
+    option = {
+        name = "This has gone far enough!"
+            LUB = {
+                declare_war_on = {
+                    target = POL
+                    type = annex_everything
+                }
+        }
+    }
+    
+}
+
+country_event = {
+    id = lubelszczyzna.6
+    title = "Lubelszczyzna wants to finalise the Central Industrial District"
+    desc = "By creating multiple industrial buildings in the states of Lublin and Lwow, the state of Lublin, wants to finalise the plans for creating a central financial district."
+    is_triggered_only = yes
+    option = {
+        name = "Allow our ally to continue their work"
+        ai_chance = {
+            factor = 100
+            base = 100
+        }
+
+        87 = {
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        88 = {
+            add_building_construction = {
+                type = industrial_complex
+                level = -1
+            }
+            add_extra_state_shared_building_slots = -1;
+        }
+    }
+
+    option = {
+        name = "Krakow belongs to Poland!"
+        add_opinion_modifier = {
+            target = LUB
+            modifier = burma_road_bad #whatever this is lol
+        }
+
+    }
+    
+}
+
+country_event = {
+    id = lubelszczyzna.7
+    title = "The State of Lublin seeks to join the Axis"
+
+    option = {
+        name = "The fascist powers grow stronger!"
+        GER = {
+        add_to_faction = LUB
+        }
+    }
+    option = {
+        name = "They are not worthy"
+        GER = {
+        add_opinion_modifier = {
+            target = LUB
+            modifier = large_decrease
+        }
+    }
+    }
+}
+
+country_event = {
+    id = lubelszczyzna.8
+    title = "Lubelszczyzna asks to join the ani-comitern pact"
+
+    option = {
+        name = "The soviets dont stand a chance!"
+        GER = {
+            add_to_faction = LUB
+            }#!! i have no idea what to put here lol
+    }
+
+    option = {
+        name = "We don't need them."
+        GER = {
+            add_opinion_modifier = {
+                target = LUB
+                modifier = large_decrease
+            }
+        }
+    }
+}
+country_event = {
+    id = lubelszczyzna.9
+
+    title = "Lubelszczyzna asks for equipment"
+
+    option = {
+        name = "We should support them in the upcoming war"
+        GER = {
+        add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -10000
+        }
+        add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = -3500
+        }
+        add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = -2500
+        }
+        }
+        LUB = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 10000
+            }
+            add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 3500
+            }
+            add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 2500
+            }
+        }
+    }
+}
