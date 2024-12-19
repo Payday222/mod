@@ -1,0 +1,16 @@
+ ideas = {
+ 	country = {
+ 		democracy_idea = {
+ 			allowed = {
+ 				always = no
+ 				has_government = fascism
+ 			}
+ 			modifier = {
+ 				stability_factor = -0.005
+ 			}
+			modifier = {
+				democratic_drift = 0.05
+			}
+ 		}
+ 	}
+ }

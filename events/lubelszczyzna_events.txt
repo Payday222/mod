@@ -202,7 +202,7 @@ country_event = {
 country_event = {
     id = lubelszczyzna.7
     title = "The State of Lublin seeks to join the Axis"
-
+    is_triggered_only = yes
     option = {
         name = "The fascist powers grow stronger!"
         GER = {
@@ -223,7 +223,7 @@ country_event = {
 country_event = {
     id = lubelszczyzna.8
     title = "Lubelszczyzna asks to join the ani-comitern pact"
-
+    is_triggered_only = yes
     option = {
         name = "The soviets dont stand a chance!"
         GER = {
@@ -243,7 +243,7 @@ country_event = {
 }
 country_event = {
     id = lubelszczyzna.9
-
+    is_triggered_only = yes
     title = "Lubelszczyzna asks for equipment"
 
     option = {
@@ -275,6 +275,43 @@ country_event = {
                 type = artillery_equipment
                 amount = 2500
             }
+        }
+    }
+}
+country_event = {
+    id = lubelszczyzna.10
+    is_triggered_only = yes
+    trigger = {
+        OR = {
+            has_government = fascism
+            has_government = communism
+        }
+    }
+    title = "Democratic party of Lubelszczyzna demands a referendum"
+
+    option = {
+        name = "Allow referendum"
+
+        if = {
+            limit = { 
+                democratic > 50
+            }
+            set_politics = {
+                ruling_party = democratic
+            }
+        } else = {
+            add_political_power = 50
+            add_stability = 5
+        }
+        
+    }
+    option = {
+        name = "Deny Referendum"
+        add_political_power = -200
+        add_stability = -30
+        add_popularity = {
+            ideology = democratic
+            popularity = 15
         }
     }
 }

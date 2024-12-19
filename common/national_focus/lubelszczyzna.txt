@@ -45,7 +45,7 @@ focus_tree = {
 		cancel_if_invalid = yes;
 		continue_if_invalid = no;
 		available_if_capitulated = no;
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		search_filters = { FOCUS_FILTER_POLITICAL, FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
 			LIT = { country_event = lubelszczyzna.1 }
@@ -256,7 +256,7 @@ focus_tree = {
 	focus = {
 		id = cop_fund
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 70
+		cost = 10
 		x = 5
 		y = 2
 		completion_reward = { 
@@ -646,7 +646,7 @@ focus_tree = {
 		id = war_with_ussr
 		icon = GFX_goal_generic_war_with_comintern
 		cost = 10
-		x = x
+		x = 0
 		y = 1
 		relative_position_id = prepare_for_war
 		prerequisite = {
@@ -736,7 +736,7 @@ focus_tree = {
 		id = ask_for_equipment
 		icon = GFX_focus_generic_german_trade
 		cost = 10
-		x = x
+		x = 0
 		y = 1
 		relative_position_id = strengthen_fasicsm
 		prerequisite = {
@@ -747,5 +747,83 @@ focus_tree = {
 			 country_event = lubelszczyzna.9
 			}
 		 }
+	}
+
+	focus = {
+		id = pursue_democracy
+		icon = GFX_surrender_tiny_flag
+		cost = 10
+		x = 24
+		y = 0
+		completion_reward = {
+			 add_ideas = democracy_idea
+		 }
+	}
+	focus = {
+		id = democratic_politicians
+		icon = GFX_surrender_tiny_flag
+		cost = 10
+		x = 0
+		y = 1
+		relative_position_id = pursue_democracy
+		prerequisite = {
+			focus = pursue_democracy
+		}
+		completion_reward = { 
+			#create democratic demagogue and others
+			#!
+		}
+	}
+	focus = {
+		id = demand_referendum
+		icon = GFX_surrender_tiny_flag
+		cost = 10
+		x = -2
+		y = 1
+		relative_position_id = democratic_politicians
+		prerequisite = {
+			focus = democratic_politicians
+		}
+		mutually_exclusive = {
+			focus = underground_democratic_movements
+		}
+		available = {
+			
+		}
+		completion_reward = { 
+			 country_event = lubelszczyzna.10
+			add_political_power = -200
+			
+		}
+	}
+	focus = { #!
+		id = underground_democratic_movements
+		icon = GFX_surrender_tiny_flag
+		cost = x
+		x = x
+		y = x
+		relative_position_id = democratic_politicians
+		prerequisite = {
+			focus = democratic_politicians
+		}
+		completion_reward = { }
+	}
+	focus = {
+		id = prepare_civil_war
+		icon = GFX_surrender_tiny_flag
+		cost = 10
+		x = 2
+		y = 1
+		
+		available = {
+			has_government = fascism
+			# has_idea = underground_democratic_movements
+
+		}
+		completion_reward = { 
+			add_political_power = -150
+			#civil war
+			#divide existing divisions
+		}
 	}
 }

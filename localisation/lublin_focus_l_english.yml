@@ -54,3 +54,6 @@
   prepare_for_war:0 "Preapare for War"
   #desc
   continue_border:0 "Continute to fortify the border"
+  #desc
+  pursue_democracy:0 "Pursue Democracy"
+  #desc

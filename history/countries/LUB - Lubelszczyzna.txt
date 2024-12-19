@@ -2,9 +2,11 @@
 
 # Starting tech
 set_technology = {
-	infantry_weapons = 10000
-
-	support_weapons = 3000
+	infantry_weapons = 1
+	artillery1 = 1
+	support_weapons = 1
+	fighter1 = 1
+	basic_machine_tools = 1
 }
 
 recruit_character = LUB_boleslaw_piasecki
